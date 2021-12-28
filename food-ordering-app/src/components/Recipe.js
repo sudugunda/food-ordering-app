@@ -3,15 +3,15 @@ import "./Recipe.css"
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import WatchLaterOutlinedIcon from '@material-ui/icons/WatchLaterOutlined';
 
-function Recipe({id, image, time, procedure, description}) {
+function Recipe({id, image, time, procedure, description, season, dietaryPreference, meal}) {
     return (
         <div className='recipe' id={id}>
             <img src={image} alt={`image${id}`}/>
             <div className='info'>
-                <span><WatchLaterOutlinedIcon/>{time}</span><span><ThumbUpAltOutlinedIcon />{procedure}</span>
+                <span><WatchLaterOutlinedIcon className="info__logo"/>{time}</span><span><ThumbUpAltOutlinedIcon className="info__logo"/>{procedure}</span>
             </div>
             <p className='description'>
-                {description}
+                {description}{season}{meal}{id}
             </p>
         </div>
     )
