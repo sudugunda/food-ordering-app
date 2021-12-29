@@ -10,8 +10,9 @@ function Recipe({id, image, time, procedure, description, season, dietaryPrefere
             <div className='info'>
                 <span><WatchLaterOutlinedIcon className="info__logo"/>{time}</span><span><ThumbUpAltOutlinedIcon className="info__logo"/>{procedure}</span>
             </div>
+            <p className='add-info'><span>{season}</span><span>{meal}</span></p>
             <p className='description'>
-                {description}{season}{meal}{id}
+                {description}{id}
             </p>
         </div>
     )

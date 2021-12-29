@@ -1,10 +1,6 @@
-import { RecipeContext } from '../context/context'
 
-export function recipeFilter(state) {
-    
-};
-
-export function filteredRecipes({ rawData, setSummer, setWinter, setSpring, setAutumn, setDiaryFree, setEggFree, setGlutenFree, setHealthy, setQuickAndEasy, setBreakfast, setDessert, setDinner, setHolidays, setSnacks}) {
+// changed filter this filter is not used refer filter/filter.js 
+export function filteredRecipes({ rawData, setSummer, setWinter, setSpring, setAutumn, setDiaryFree, setEggFree, setGlutenFree, setHealthy, setQuickAndEasy, setBreakfast, setDessert, setDinner, setHolidays, setSnacks }) {
     console.log('filteredRecipes called');
     let list = [];
     if(setBreakfast || setDessert  || setDinner  || setHolidays  || setSnacks){

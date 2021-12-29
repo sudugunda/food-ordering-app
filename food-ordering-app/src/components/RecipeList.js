@@ -2,23 +2,19 @@ import React, { useState, useContext, useEffect } from 'react'
 import Recipe from './Recipe'
 import './RecipeList.css'
 import { RecipeContext } from '../context/context'
-import { filteredRecipes } from '../filter/recipeFilter'
+import { mealsFilter } from '../filter/filter'
 
 function RecipeList() {
 
     const {state, dispatch} = useContext(RecipeContext);
 
     useEffect(() => {
-        let arr = filteredRecipes(state);
-        console.log(arr);
+        let arr = mealsFilter(state);
         dispatch({type: 'SET_LIST', data: arr})
     }, [state.setSummer, state.setWinter, state.setSpring, state.setAutumn,
         state.setDiaryFree, state.setEggFree, state.setGlutenFree, state.setHealthy, state.setQuickAndEasy,
         state.setBreakfast, state.setDessert, state.setDinner, state.setHolidays, state.setSnacks,
      ])
-
-    const [listRecipe, setListRecipe] = useState(state.currentList);
-
 
     return (
         <div className='recipe__list'>
