@@ -8,6 +8,10 @@ function SideNav() {
 
     const [list, setList] = useState(data);
 
+    function demo(){
+        console.log('hi');
+    }
+
     return (
         <div className='sidebar'>
             <h2>Filter Recipes</h2>

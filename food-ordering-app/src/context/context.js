@@ -4,7 +4,7 @@ import { createContext } from 'react'
 export const initialState = {
     rawData: rawData,
     currentList: [],
-    setSummer: true,
+    setSummer: false,
     setWinter: false,
     setSpring: false,
     setAutumn: false,
